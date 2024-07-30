@@ -1,0 +1,66 @@
+.indie-flower-regular {
+    font-family: "Indie Flower", cursive;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+.give-you-glory-regular {
+    font-family: "Give You Glory", cursive;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+body {
+    background-color: #FAFA9E;
+    color: #F662AA;
+    font-family: "Indie Flower", sans-serif;
+}
+
+#bio {
+    text-align: left;
+    font-size: 20px;
+}
+
+h1 {
+    margin: 30px 10px;
+    font-size: 44px;
+    color: #501130;
+    font-family: "Give You Glory", sans-serif;
+}
+
+h2 {
+    margin-left: 10px;
+    font-size: 30px;
+    font-weight: 350;
+    color: #9f3368;
+    background-color: #fff;
+}
+
+.list1 > li {
+    font-size: 18px;
+}
+
+.list1 {
+    border: dashed #501130;
+}
+
+.list1, .list2, #bio {
+    margin-bottom: 35px;
+    margin-left: 25px;
+}
+
+li {
+    padding-bottom: 7px;
+}
+
+.list2 {
+    list-style-type: none;
+    display: flex;
+}
+
+.list2 > li {
+    color: #4143cb;
+    font-size: 18px;
+    flex-direction: row;
+    padding-right: 20px;
+}
