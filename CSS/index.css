@@ -16,6 +16,21 @@ body {
     font-family: "Indie Flower", sans-serif;
 }
 
+nav {
+    background-color: #fff;
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navitem {
+    flex-direction: row;
+    list-style-type: none;
+    padding: 10px;
+}
+
 #bio {
     text-align: left;
     font-size: 20px;
@@ -36,18 +51,49 @@ h2 {
     background-color: #fff;
 }
 
-.list1 > li {
+.list1 > li, .list1-2 > li, .list1-1 > li {
     font-size: 18px;
 }
 
-.list1 {
-    border: dashed #501130;
+.exp-section {
+    border: solid #501130;
 }
 
-.list1, .list2, #bio {
+.work-hist {
+    display: flex;
+}
+
+.companies, .dates {
+    width: auto;
+    flex: 0 1 auto;
+}
+
+.roles {
+    display: flex;
+    width: 700px;
+    flex-direction: row;
+    flex: 1 1 auto;
+}
+
+.titles {
+    justify-content: space-between;
+}
+
+
+.list1, .list1-1, .list1-2, .desc-list {
+    list-style-type: none;
+
+}
+
+.des-item {
+    font-size: 11px;
+}
+
+.list1, .list2, .list1-1, #bio {
     margin-bottom: 35px;
     margin-left: 25px;
 }
+
 
 li {
     padding-bottom: 7px;
@@ -56,6 +102,7 @@ li {
 .list2 {
     list-style-type: none;
     display: flex;
+    justify-content: space-around;
 }
 
 .list2 > li {
