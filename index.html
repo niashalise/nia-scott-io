@@ -76,6 +76,22 @@
         <section class="projects-section">
             <h2 class="projects" id="projects">Projects</h2>
         </section>
+        <section id="leave_message">
+            <h2>Leave a Message</h2>
+            <form name="leave_message" class="message-form">
+                <label for="usersName" id="usersName">Name:</label>
+                <input type="text" name="usersName" required="true"><br>
+                <label for="usersEmail" id="email">Email:</label>
+                <input type="email" name="usersEmail" required="true"><br>
+                <label for="usersMessage" id="usersMessage">Message:</label>
+                <textarea name="usersMessage" required="true"></textarea><br>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </section>
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul class="message-list"></ul>
+        </section>
         <script src="js/index.js"></script>
     </body>
 </html>
