@@ -114,6 +114,23 @@ li {
     padding-right: 20px;
 }
 
+input {
+    max-width: 80%;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+.submit {
+    margin-top: 15px;
+    margin-left: 85px;
+    background-color: #FAFA9E;
+    color: #501130;
+    font-family: "Indie Flower", sans-serif;
+    padding: 10px;
+    font-weight: bolder;
+    border-radius: 8px;
+}
+
 /* Media Queries for Mobile Devices */
 
 @media only screen and (max-width: 500px) {
