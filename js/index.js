@@ -22,7 +22,7 @@ footer.appendChild(copyright);
 const skills = ["HTML", "CSS", "JavaScript", "Python", "GitHub", "Figma"];
 
 // Create a variable named skillsSection and use "DOM Selection" to select the skills section by id
-const skillsSection = document.getElementById("skills-section");
+const skillsSection = document.getElementById("#skills-section");
 
 const skillsList = skillsSection.querySelector("ul");
 
@@ -36,8 +36,8 @@ for (i = 0; i < skills.length; i++) {
 let entryById = {};
 // Create a variable named messageForm to select the "leave_message" form by name attribute
 const messageForm = document.querySelector("[name='leave_message']");
-const messageSection = document.getElementById("messages");
-const messageList = document.querySelector("message-list");
+const messageSection = document.getElementById("#messages");
+const messageList = document.querySelector(".message-list");
 messageSection.hidden = true;
 
 let idCounter = 0;
@@ -47,7 +47,7 @@ function makeId() {
 }
 
 // Add an event listener to the messageForm element that handles the "submit" event
-messageForm.addEventListener("click", (event) => {
+messageForm.addEventListener("submit", (event) => {
     event.preventDefault();
     let name = event.target.usersName.value;
     let email = event.target.usersEmail.value;
@@ -88,4 +88,20 @@ function removeBtn() {
     });
     return removeBtn;
 };
+
+// projects section
+const projectsSection = document.querySelector('.projects-section');
+const projectList = document.querySelector('.projects-list');
+
+// fetch request
+fetch('https://api.github.com/users/niashalise/repos')
+    .then(response => response.json())
+    .then(repositories => {
+        repositories.forEach(repo => {
+            const project = document.createElement('li');
+            project.innerText = repo.name;
+            projectList.appendChild(project);
+        })
+    })
+    .catch(error => console.error('Error: ', error));
 

@@ -1,0 +1,176 @@
+    1  open $TMPDIR
+    2  cupsctl WebInterface=yes
+    3  git version
+    4  git version
+    5  git-scm
+    6  git version
+    7  whoami
+    8  cd doc
+    9  cd Documents/
+   10  clear
+   11  cd ~
+   12  mkdir Desktop
+   13  ls
+   14  clear
+   15  pwd
+   16  ls -F
+   17  clear
+   18  man ls
+   19  ls -F Desktop
+   20  clear
+   21  mkdir test
+   22  cd test
+   23  ls
+   24  touch test.txt
+   25  cd ..
+   26  ls
+   27  rm test
+   28  rm -r -i test
+   29  cd test
+   30  ls
+   31  clear
+   32  cd test
+   33  ls
+   34  cd ..
+   35  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   36  brew install git
+   37  git --version
+   38  brew install git
+   39  brew link git
+   40  git --version
+   41  brew doctor
+   42  brew link --overwrite git
+   43  brew cleanup
+   44  git --version
+   45  clear
+   46  git config --global user.name "Nia"
+   47  git config --global user.email "shalise.nia@gmail.com"
+   48  git config --global init.defaultBranch main
+   49  git config --global color.ui auto
+   50  git config --global pull.rebase false
+   51  git config --get user.name
+   52  git config --get user.email
+   53  echo .DS_Store >> ~/.gitignore_global
+   54  git config --global core.excludesfile ~/.gitignore_global
+   55  ls ~/.ssh/id_ed25519.pub
+   56  ssh-keygen -t ed25519
+   57  cat
+   58  cat ~/.ssh/id_ed25519.pub
+   59  pb < ~/.ssh/id_ed25519.pub
+   60  pbcopy < ~/.ssh/id_ed25519.pub
+   61  ssh -T git@github.com
+   62  git config --global init.defaultBranch main
+   63  mkdir repos
+   64  cd repos/
+   65  git clone git@github.com:niashalise/git_test.git
+   66  cd git_test
+   67  git remote -v
+   68  touch hello_world.txt
+   69  git status
+   70  git add hello_world.txt
+   71  git status
+   72  git commit -m "Add hello_world.txt"
+   73  git status
+   74  git log
+   75  code .
+   76  code .
+   77  git status
+   78  cd repos
+   79  git status
+   80  cd ..
+   81  git checkout main
+   82  clear
+   83  cd ..
+   84  git status
+   85  git add README.md
+   86  clear
+   87  cd repos
+   88  git status
+   89  clear
+   90  ls
+   91  cd ..
+   92  ls
+   93  clear
+   94  cd Desktop
+   95  git@github.com:niashalise/nia-scott-io.git
+   96  clear
+   97  git clone git@github.com:niashalise/nia-scott-io.git
+   98  cd nia-scott-io
+   99  git checkout -b lesson-7
+  100  git status
+  101  git add .
+  102  git status
+  103  git commit -m "my first commit"
+  104  git push origin lesson-7
+  105  git status
+  106  git cd ..
+  107  git checkout main
+  108  git pull origin main
+  109  git checkout -b lesson-8
+  110  git status
+  111  git add .
+  112  git status
+  113  git commit -m "about, experience, connect sections added"
+  114  git push
+  115  git push --set-upstream origin lesson-8
+  116  git congif push.autoSetupRemote true
+  117  git config push.autoSetupRemote true
+  118  clear
+  119  git checkout main
+  120  git checkout -b lesson-9
+  121  git status
+  122  git add .
+  123  git status
+  124  git commit -m "html boilerplate and html markup done"
+  125  git push
+  126  clear
+  127  git checkout main
+  128  git pull origin main
+  129  git checkout -b lesson-10
+  130  git status
+  131  git add .
+  132  git status
+  133  git commit -m "styling added"
+  134  git push
+  135  git checkout main
+  136  git pull origin main
+  137  git checkout -b lesson-11
+  138  git checkout main
+  139  cd ..
+  140  git checkout main
+  141  cd
+  142  git status
+  143  cd nia-scott-io
+  144  cd Desktop
+  145  status
+  146  git status
+  147  cd nia-scott-io
+  148  git checkout main
+  149  git status
+  150  git pull origin main
+  151  git checkout -b lesson-13
+  152  clear
+  153  git status
+  154  git add .
+  155  git status
+  156  git commit -m "js added, created footer and skills"
+  157  git push
+  158  git status
+  159  git add .
+  160  git status
+  161  git commit -m "updated src file for js to properly link to html file"
+  162  git push
+  163  git checkout main
+  164  git checkout -b lesson-14
+  165  git status
+  166  git add index.js
+  167  git add js/index.js
+  168  git status
+  169  git add .
+  170  git status
+  171  git commit -m "form and functionality added"
+  172  git push
+  173  git checkout main
+  174  git pull origin main
+  175  git checkout -b lesson-15
+  176  history > command_history.txt
