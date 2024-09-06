@@ -22,7 +22,7 @@ footer.appendChild(copyright);
 const skills = ["HTML", "CSS", "JavaScript", "Python", "GitHub", "Figma"];
 
 // Create a variable named skillsSection and use "DOM Selection" to select the skills section by id
-const skillsSection = document.getElementById("#skills-section");
+const skillsSection = document.getElementById("skills-section");
 
 const skillsList = skillsSection.querySelector("ul");
 
