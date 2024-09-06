@@ -36,7 +36,7 @@ for (i = 0; i < skills.length; i++) {
 let entryById = {};
 // Create a variable named messageForm to select the "leave_message" form by name attribute
 const messageForm = document.querySelector("[name='leave_message']");
-const messageSection = document.getElementById("#messages");
+const messageSection = document.getElementById("messages");
 const messageList = document.querySelector(".message-list");
 messageSection.hidden = true;
 
@@ -63,31 +63,29 @@ messageForm.addEventListener("submit", (event) => {
     newMessage.classList.add('message-item');
     newMessage.innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message}</span>`;
 
-    entryById[uid] = { usersName: name, usersEmail: email, usersMessage: message};
-    newMessage.appendChild(removeBtn());
-    messageList.appendChild(newMessage);
-    messageForm.reset();
-    messageSection.hidden = false;
-})
-
-//create remove button
-function removeBtn() {
+    //create remove button
     const removeButton = document.createElement("button");
     removeButton.innerText = "Remove";
     removeButton.type = 'button';
     removeButton.className = 'remove-btn'
+
+
+    entryById[uid] = { usersName: name, usersEmail: email, usersMessage: message};
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+    messageForm.reset();
+    messageSection.hidden = false;
 
     removeButton.addEventListener('click', () => {
         let entry = removeButton.parentNode;
         let uid1 = entry.getAttribute('id');
         delete entryById[uid1];
         entry.remove();
-        if (messageList.childElementCount === 0) {
-            messagesSection.hidden = true;
-        };
-    });
-    return removeBtn;
-};
+            if (messageList.childElementCount === 0) {
+                messageSection.hidden = true;
+            };
+})
+})
 
 // projects section
 const projectsSection = document.querySelector('.projects-section');
@@ -98,10 +96,10 @@ fetch('https://api.github.com/users/niashalise/repos')
     .then(response => response.json())
     .then(repositories => {
         repositories.forEach(repo => {
-            const project = document.createElement('li');
-            project.innerText = repo.name;
-            projectList.appendChild(project);
-        })
+        const project = document.createElement('li');
+        project.innerText = repo.name;
+        projectList.appendChild(project);
+    })
     })
     .catch(error => console.error('Error: ', error));
 
