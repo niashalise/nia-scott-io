@@ -13,6 +13,7 @@
     Desktop styles
 */
 body {
+    margin-top: 15px;
     background-color: #501130;
     color: #FAFA9E;
     font-family: "Indie Flower", sans-serif;
