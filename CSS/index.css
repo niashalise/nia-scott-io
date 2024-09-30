@@ -300,6 +300,14 @@ input {
     }
 }
 
+.list1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.list1 > li {
+    flex-direction: row;
+}
 
 /* Media Queries for Tablets */
 
