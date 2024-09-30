@@ -118,3 +118,22 @@ fetch('https://api.github.com/users/niashalise/repos')
     })
     .catch(error => console.error('Error: ', error));
 
+/* JS for flip cards */
+const cardContainer = document.querySelector('.card-container');
+const cards = document.querySelectorAll('.card');
+const cardInner = document.querySelector('.card__inner');
+const cardFront = document.querySelector('card__face--front')
+
+/* Click event for cards */
+// Select all card__inner elements
+const cardInners = document.querySelectorAll('.card__inner');
+
+// Function to flip the card
+function flipCard() {
+  this.classList.toggle('is-flipped');
+}
+
+// Add click event listener to each card__inner
+cardInners.forEach(cardInner => {
+  cardInner.addEventListener('click', flipCard);
+});
