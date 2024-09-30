@@ -1,3 +1,18 @@
+/*
+Nav menu start
+*/
+const hamMenu = document.querySelector('.ham-menu');
+
+const offScreenMenu = document.querySelector('.off-screen-menu');
+
+hamMenu.addEventListener('click', () => {
+  hamMenu.classList.toggle('active');
+  offScreenMenu.classList.toggle('active');
+})
+/*
+Nav menu end
+*/
+
 const footer = document.createElement("footer");
 
 const body = document.body;
